@@ -1,0 +1,124 @@
+/* ============================================================
+   LACROIX AVOCAT · responsive (desktop-first)
+   ============================================================ */
+
+/* ---------- ≤ 1280px : header compact ---------- */
+@media (max-width: 1280px) {
+  .header-cta-duo { gap: 8px; }
+  .header-cta-duo .btn { padding: 9px 13px; font-size: 0.8438rem; }
+  .nav-principale a { padding: 8px 9px; font-size: 0.875rem; }
+}
+
+/* ---------- ≤ 1180px : bascule menu burger ---------- */
+@media (max-width: 1180px) {
+  .nav-principale { display: none; }
+  .header-cta-duo { display: none; }
+  .burger { display: flex; }
+
+  .articles { grid-template-columns: repeat(2, 1fr); }
+  .temoignages { grid-template-columns: 1fr; max-width: 620px; margin-left: auto; margin-right: auto; }
+}
+
+/* ---------- ≤ 900px ---------- */
+@media (max-width: 900px) {
+  .cabinet-grille,
+  .honoraires-grille,
+  .contact-grille,
+  .formation-grille,
+  .rejoindre-bloc {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cabinet-portrait { max-width: 420px; }
+  .cabinet-portrait::before { inset: 6% -3% -5% 6%; }
+
+  .cartes-offres { grid-template-columns: 1fr; }
+  .carte-offre {
+    border-left: none;
+    border-top: 1px solid var(--ligne);
+    padding: 26px 0;
+  }
+  .carte-offre:first-child { border-top: none; padding-top: 0; }
+  .carte-offre:last-child { padding-bottom: 0; }
+
+  .accordeon-corps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-left: 0;
+  }
+  .accordeon-corps img { max-width: min(480px, 100%); }
+
+  .rejoindre-actions { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* ---------- ≤ 640px ---------- */
+@media (max-width: 640px) {
+  .conteneur { padding: 0 20px; }
+  .menu-mobile { padding-left: 20px; padding-right: 20px; }
+
+  body { font-size: 1rem; }
+
+  .marque-mark { height: 38px; }
+  .marque-texte { font-size: 0.9375rem; }
+
+  .hero h1 { font-size: clamp(1.85rem, 8vw, 2.7rem); }
+  .hero-accroche { font-size: 1.0313rem; }
+  .hero-cta .btn,
+  .cta-bande .hero-cta .btn { width: 100%; }
+
+  .hero-segment { display: flex; flex-direction: column; width: 100%; }
+  .segment-btn { width: 100%; }
+  .segment-btn + .segment-btn { border-left: none; border-top: 1.5px solid var(--bordeaux); }
+
+  .credentials-liste { gap: 8px 22px; padding-top: 16px; padding-bottom: 16px; }
+  .credentials-liste span { font-size: 0.75rem; }
+
+  .encadre-blanc { padding: 26px 22px; }
+
+  .citation { font-size: 1.1875rem; padding-left: 18px; }
+  .qualites { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+
+  .accordeon-entete { gap: 14px; min-height: 72px; padding: 18px 0; }
+  .accordeon-entete:hover { padding-left: 6px; }
+  .accordeon-num { width: 26px; font-size: 0.9375rem; }
+  .accordeon-fleche { width: 44px; height: 44px; }
+
+  .etapes li { gap: 18px; padding: 22px 0; }
+  .etapes .num { width: 46px; height: 46px; }
+  .honoraires-carte { padding: 30px 24px; }
+
+  .articles { grid-template-columns: 1fr; }
+
+  .rejoindre-actions { flex-direction: column; }
+  .rejoindre-actions .btn { width: 100%; }
+
+  .champ-duo { grid-template-columns: 1fr; gap: 0; }
+  .contact-formulaire { padding: 30px 22px; }
+
+  .pied-grille { grid-template-columns: 1fr; gap: 34px; padding-top: 56px; padding-bottom: 40px; }
+  .pied-bas { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- ≤ 400px ---------- */
+@media (max-width: 400px) {
+  .qualites { grid-template-columns: 1fr; }
+}
+
+/* ---------- Anti-zoom iOS : champs 16px minimum ---------- */
+@media (max-width: 1024px) {
+  .champ input,
+  .champ select,
+  .champ textarea { font-size: 16px; }
+}
+
+/* ---------- Mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
