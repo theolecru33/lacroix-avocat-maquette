@@ -328,23 +328,21 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 .menu-mobile-pied { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
 
 /* ============================================================
-   HERO (nuit, éditorial, portrait sous arche)
+   HERO (nuit, éditorial, portrait en cadre crème)
    ============================================================ */
 .hero {
   background: var(--nuit);
   color: var(--blanc);
-  overflow: hidden;
 }
 
 .hero-grille {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 56px;
-  align-items: end;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(32px, 4vw, 60px);
+  align-items: stretch;
   padding-top: clamp(48px, 6vw, 88px);
+  padding-bottom: clamp(48px, 6vw, 88px);
 }
-
-.hero-texte { padding-bottom: clamp(48px, 6vw, 88px); }
 
 .hero h1 {
   color: var(--blanc);
@@ -378,33 +376,33 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Portrait sous arche crème */
-.hero-visuel { position: relative; align-self: end; display: flex; justify-content: center; }
-.hero-arche {
+/* Portrait : cadre rectangulaire crème, photo posée au fond */
+.hero-visuel { display: flex; }
+.hero-cadre {
   position: relative;
-  width: min(400px, 100%);
+  width: 100%;
+  min-height: clamp(420px, 40vw, 620px);
   background: var(--creme);
-  border-radius: 500px 500px 0 0;
+  border-radius: var(--rayon);
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  aspect-ratio: 400 / 500;
 }
-.hero-arche img {
-  width: 88%;
+.hero-cadre img {
+  width: min(440px, 88%);
   height: auto;
-  transform: translateY(2px);
+  margin-bottom: -2px;
 }
 .hero-badge {
   position: absolute;
-  left: 0;
-  bottom: 34px;
+  left: 22px;
+  bottom: 22px;
   background: var(--blanc);
   color: var(--marine);
   border-radius: var(--rayon-petit);
   padding: 14px 22px;
-  box-shadow: 0 18px 40px rgba(4, 10, 22, 0.35);
+  box-shadow: 0 18px 40px rgba(4, 10, 22, 0.18);
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -413,32 +411,32 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 .hero-badge strong { font-family: var(--titre); font-weight: 400; font-size: 1.0625rem; }
 .hero-badge span { font-size: 0.8125rem; color: var(--texte); }
 
-/* Statistiques */
+/* Repères chiffrés : tableau 2 x 2 dans la colonne de gauche */
 .hero-stats {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--filet-clair);
-  padding: 36px 0 44px;
-  gap: 0;
+  margin-top: clamp(36px, 4vw, 52px);
 }
-.hero-stats li { padding: 0 32px; border-left: 1px solid var(--filet-clair); }
-.hero-stats li:first-child { padding-left: 0; border-left: none; }
+.hero-stats li { padding: 20px 28px 20px 0; }
+.hero-stats li:nth-child(even) { padding-left: 28px; padding-right: 0; border-left: 1px solid var(--filet-clair); }
+.hero-stats li:nth-child(n+3) { border-top: 1px solid var(--filet-clair); }
 .hero-stats strong {
   display: block;
   font-family: var(--titre);
   font-weight: 400;
-  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-size: clamp(1.7rem, 2.4vw, 2.2rem);
   color: var(--creme);
   line-height: 1.1;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 .hero-stats li > span {
   font-size: 0.9063rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.66);
   display: block;
-  max-width: 16em;
+  max-width: 18em;
 }
 
 /* ---------- Bandeau credentials ---------- */

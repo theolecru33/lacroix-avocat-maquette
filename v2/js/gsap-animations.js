@@ -52,8 +52,8 @@
     });
   });
 
-  /* ---------- Portrait sous arche : montée douce à l'arrivée ---------- */
-  var portrait = document.querySelector('.hero-arche img');
+  /* ---------- Portrait : montée douce à l'arrivée ---------- */
+  var portrait = document.querySelector('.hero-cadre img');
   if (portrait) {
     gsap.fromTo(portrait,
       { y: 46 },
