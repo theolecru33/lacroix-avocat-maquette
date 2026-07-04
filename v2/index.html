@@ -15,6 +15,18 @@
 </head>
 <body>
 
+<!-- Filtre duotone encre (photos traitées aux couleurs de la marque) -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <filter id="duotone-encre" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    <feComponentTransfer>
+      <feFuncR type="table" tableValues="0.082 1"/>
+      <feFuncG type="table" tableValues="0.149 1"/>
+      <feFuncB type="table" tableValues="0.243 1"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
+
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ===================== HEADER ===================== -->
@@ -58,10 +70,15 @@
 
 <main id="contenu">
 
-<!-- ===================== HERO ===================== -->
+<!-- ===================== HERO · une de journal ===================== -->
 <section class="hero">
-  <div class="conteneur hero-haut">
-    <div>
+  <div class="conteneur manchette" data-reveal>
+    <span class="meta">Cabinet d'avocat en droit social</span>
+    <span class="meta">Bordeaux · Barreau de Bordeaux</span>
+  </div>
+
+  <div class="conteneur hero-une">
+    <div class="hero-texte">
       <h1 data-reveal>Le droit social, <span class="rouge">sans détour</span>.</h1>
       <p class="hero-sous" data-reveal>Licenciement, rupture conventionnelle, accident du travail, burn-out : à Bordeaux, le cabinet Lacroix conseille et défend les employeurs comme les salariés.</p>
       <div class="hero-cta" data-reveal>
@@ -69,15 +86,31 @@
         <a class="btn btn-encre" href="tel:+33744853035">07 44 85 30 35</a>
       </div>
     </div>
-    <aside class="fiche" data-reveal aria-label="Le cabinet en bref">
-      <p class="meta fiche-titre">Le cabinet en bref</p>
+    <figure class="hero-figure duotone" data-reveal>
+      <div class="cadre">
+        <span class="folio">fig. 01</span>
+        <picture>
+          <source srcset="img/lionel-lacroix.webp" type="image/webp">
+          <img src="img/lionel-lacroix.png" alt="Maître Lionel Lacroix, avocat en droit social à Bordeaux" width="596" height="918" fetchpriority="high">
+        </picture>
+      </div>
+      <figcaption>
+        <span class="meta">Me Lionel Lacroix</span>
+        <span class="meta">Avocat en droit social</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Bandeau de faits -->
+  <div class="fiche-bande" data-reveal>
+    <div class="conteneur">
       <dl>
         <div><dt>Barreau</dt><dd>Bordeaux</dd></div>
         <div><dt>Exercice</dt><dd>100&nbsp;% droit social</dd></div>
         <div><dt>Parcours</dt><dd>10 ans et plus en entreprise</dd></div>
-        <div><dt>Premier échange</dt><dd><span class="rouge">Offert, 10 minutes</span></dd></div>
+        <div><dt>Premier échange</dt><dd><span class="rouge">Offert · 10 minutes</span></dd></div>
       </dl>
-    </aside>
+    </div>
   </div>
 
   <!-- Sommaire -->
@@ -117,7 +150,7 @@
     </header>
 
     <article class="entree" data-reveal>
-      <span class="meta">I.</span>
+      <span class="entree-num">I.</span>
       <div class="entree-texte">
         <h3>Droit du travail</h3>
         <p>De l'embauche à la rupture : rédaction du contrat et des avenants, sanction disciplinaire, inaptitude, reclassement, rupture conventionnelle, licenciement. Conseil au quotidien et défense devant le Conseil de prud'hommes.</p>
@@ -129,7 +162,7 @@
     </article>
 
     <article class="entree" data-reveal>
-      <span class="meta">II.</span>
+      <span class="entree-num">II.</span>
       <div class="entree-texte">
         <h3>Droit de la sécurité sociale</h3>
         <p>Accidents du travail, maladies professionnelles, indemnités journalières, invalidité. Lecture du compte AT/MP, relations avec la CPAM, contentieux devant le pôle social du Tribunal judiciaire.</p>
@@ -141,7 +174,7 @@
     </article>
 
     <article class="entree" data-reveal>
-      <span class="meta">III.</span>
+      <span class="entree-num">III.</span>
       <div class="entree-texte">
         <h3>Risques psychosociaux et burn-out</h3>
         <p>Obligation de sécurité et de prévention, harcèlement, épuisement professionnel. Une approche qui croise le juridique et l'humain, nourrie par une formation de secouriste en santé mentale.</p>
@@ -153,7 +186,7 @@
     </article>
 
     <article class="entree" data-reveal>
-      <span class="meta">IV.</span>
+      <span class="entree-num">IV.</span>
       <div class="entree-texte">
         <h3>Droit de la protection sociale</h3>
         <p>Handicap et MDPH : AAH, RQTH, CMI, AESH. Retraite, chômage, régime agricole. Une connaissance fine du secteur médico-social et de ses conventions collectives.</p>
@@ -171,45 +204,49 @@
 </section>
 
 <!-- ===================== 02 · LE CABINET ===================== -->
-<section class="section" id="cabinet">
-  <div class="conteneur">
-    <header class="section-entete">
+<section class="section section-cabinet" id="cabinet">
+  <div class="conteneur cabinet-grille">
+    <figure class="cabinet-figure duotone" data-reveal>
+      <div class="cadre">
+        <span class="folio">fig. 02</span>
+        <picture>
+          <source srcset="img/lionel-lacroix.webp" type="image/webp">
+          <img src="img/lionel-lacroix.png" alt="Maître Lionel Lacroix, avocat en droit social à Bordeaux" width="596" height="918" loading="lazy">
+        </picture>
+      </div>
+      <figcaption>
+        <span class="meta">Me Lionel Lacroix</span>
+        <span class="meta">Barreau de Bordeaux</span>
+      </figcaption>
+    </figure>
+    <div class="cabinet-bio">
       <span class="folio" data-reveal>02</span>
       <h2 data-reveal>Un avocat qui vient de votre monde, pas qui le découvre.</h2>
-    </header>
-    <div class="cabinet-grille">
-      <figure class="cabinet-figure" data-reveal>
-        <div class="cadre">
-          <picture>
-            <source srcset="img/lionel-lacroix.webp" type="image/webp">
-            <img src="img/lionel-lacroix.png" alt="Maître Lionel Lacroix, avocat en droit social à Bordeaux" width="596" height="918">
-          </picture>
-        </div>
-        <figcaption>
-          <span class="meta">Me Lionel Lacroix</span>
-          <span class="meta">Barreau de Bordeaux</span>
-        </figcaption>
-      </figure>
-      <div class="cabinet-bio">
-        <p data-reveal>Premier CDI signé à 22 ans, débuts à l'Assemblée nationale comme attaché parlementaire, puis plus de dix ans au sein d'un grand groupe privé chargé d'une mission de service public : rédacteur juridique, responsable de commission de recours amiable, audiencier devant le Tribunal des affaires de sécurité sociale.</p>
-        <p data-reveal>Médecins-conseils, médecins du travail, ingénieurs en prévention, psychologues, partenaires sociaux : une expérience de terrain avec tous les acteurs de la santé au travail. Secouriste en santé mentale : une double compétence rare, le droit et l'humain.</p>
-        <ul class="qualites" data-reveal>
-          <li><h3>Battant</h3><p>Défendre vos intérêts sans jamais rien lâcher.</p></li>
-          <li><h3>Stratège</h3><p>Voir les angles, les leviers et les opportunités d'un dossier.</p></li>
-          <li><h3>Franc-parler</h3><p>Un avis clair et direct, au service de vos seuls intérêts.</p></li>
-          <li><h3>Humain</h3><p>Patient, à l'écoute, stable même quand les situations sont lourdes.</p></li>
-        </ul>
-      </div>
+      <p data-reveal>Premier CDI signé à 22 ans, débuts à l'Assemblée nationale comme attaché parlementaire, puis plus de dix ans au sein d'un grand groupe privé chargé d'une mission de service public : rédacteur juridique, responsable de commission de recours amiable, audiencier devant le Tribunal des affaires de sécurité sociale.</p>
+      <p data-reveal>Médecins-conseils, médecins du travail, ingénieurs en prévention, psychologues, partenaires sociaux : une expérience de terrain avec tous les acteurs de la santé au travail. Secouriste en santé mentale : une double compétence rare, le droit et l'humain.</p>
+      <ul class="qualites" data-reveal>
+        <li><h3>Battant</h3><p>Défendre vos intérêts sans jamais rien lâcher.</p></li>
+        <li><h3>Stratège</h3><p>Voir les angles, les leviers et les opportunités d'un dossier.</p></li>
+        <li><h3>Franc-parler</h3><p>Un avis clair et direct, au service de vos seuls intérêts.</p></li>
+        <li><h3>Humain</h3><p>Patient, à l'écoute, stable même quand les situations sont lourdes.</p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ===================== LA CONVICTION (unique bande sombre) ===================== -->
-<section class="bande-sombre">
-  <div class="conteneur section-corps">
-    <p class="bande-citation" data-reveal>« Avant de plaider, <span class="rouge">construire</span>. »</p>
-    <p class="bande-suite" data-reveal>Plus de dix ans vécus en entreprise avant la robe. La voie de l'accord équilibré chaque fois qu'elle existe, le contentieux chaque fois qu'il le faut.</p>
+<!-- ===================== DIPTYQUE · la conviction ===================== -->
+<section class="diptyque">
+  <div class="diptyque-texte">
+    <p class="diptyque-citation" data-reveal>« Avant de plaider, <span class="rouge">construire</span>. »</p>
+    <p class="diptyque-suite" data-reveal>Plus de dix ans vécus en entreprise avant la robe. La voie de l'accord équilibré chaque fois qu'elle existe, le contentieux chaque fois qu'il le faut.</p>
     <p class="meta" data-reveal>Être utile · Être humain · Oser</p>
+  </div>
+  <div class="diptyque-photo duotone">
+    <picture>
+      <source srcset="img/bordeaux.webp" type="image/webp">
+      <img src="img/bordeaux.jpg" alt="Place de la Bourse et tramway, Bordeaux" width="1080" height="771" loading="lazy">
+    </picture>
+    <span class="meta">Place de la Bourse, Bordeaux · fig. 03</span>
   </div>
 </section>
 
@@ -223,17 +260,17 @@
 
     <ol class="etapes">
       <li data-reveal>
-        <span class="meta">01</span>
+        <span class="etapes-num">01</span>
         <h3>Premier échange offert</h3>
         <p>Dix minutes, par téléphone ou en visio, pour exposer votre situation. Une réponse claire : votre dossier peut-il être pris en charge, et de quelle façon.</p>
       </li>
       <li data-reveal>
-        <span class="meta">02</span>
+        <span class="etapes-num">02</span>
         <h3>Consultation</h3>
         <p>Un échange direct avec Maître Lacroix : analyse, conseil, stratégie. Vous repartez avec une direction claire.</p>
       </li>
       <li data-reveal>
-        <span class="meta">03</span>
+        <span class="etapes-num">03</span>
         <h3>Mission et convention</h3>
         <p>Une convention d'honoraires précise la mission et son coût. Le forfait est privilégié : un montant global, connu à l'avance.</p>
       </li>
@@ -303,15 +340,18 @@
     </header>
     <div class="citations">
       <figure class="citation-tiree" data-reveal>
-        <blockquote>« Un accompagnement clair et humain du début à la fin. J'ai toujours su où j'en étais dans mon dossier. »</blockquote>
+        <span class="citation-guillemet" aria-hidden="true">«</span>
+        <blockquote>Un accompagnement clair et humain du début à la fin. J'ai toujours su où j'en étais dans mon dossier.</blockquote>
         <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Témoignage client</span></figcaption>
       </figure>
       <figure class="citation-tiree" data-reveal>
-        <blockquote>« En tant qu'employeur, j'ai apprécié sa connaissance fine du terrain et sa franchise sur les risques. »</blockquote>
+        <span class="citation-guillemet" aria-hidden="true">«</span>
+        <blockquote>En tant qu'employeur, j'ai apprécié sa connaissance fine du terrain et sa franchise sur les risques.</blockquote>
         <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Dirigeant de PME</span></figcaption>
       </figure>
       <figure class="citation-tiree" data-reveal>
-        <blockquote>« Une vraie écoute sur une situation de burn-out, et une stratégie qui a abouti à un accord équilibré. »</blockquote>
+        <span class="citation-guillemet" aria-hidden="true">«</span>
+        <blockquote>Une vraie écoute sur une situation de burn-out, et une stratégie qui a abouti à un accord équilibré.</blockquote>
         <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Salariée</span></figcaption>
       </figure>
     </div>
@@ -415,17 +455,19 @@
   </div>
 </section>
 
-<!-- ===================== PHOTO PLEINE PAGE ===================== -->
-<figure class="pleine-page">
-  <picture>
-    <source srcset="img/bordeaux.webp" type="image/webp">
-    <img src="img/bordeaux.jpg" alt="Place de la Bourse et tramway, Bordeaux" width="1080" height="771" loading="lazy">
-  </picture>
-  <figcaption>
-    <span class="meta">Place de la Bourse, Bordeaux</span>
-    <span class="meta">Cabinet : arrêt Palais de Justice</span>
-  </figcaption>
-</figure>
+<!-- ===================== BANDE ROUGE · le premier pas ===================== -->
+<section class="bande-rouge">
+  <div class="conteneur section-corps">
+    <div>
+      <h2 class="bande-rouge-titre" data-reveal>Votre premier échange de 10 minutes, offert.</h2>
+      <p class="bande-rouge-sous" data-reveal>Un appel ou un message suffit. Le cabinet vous répond du lundi au vendredi, de 8&nbsp;h à 19&nbsp;h. Chaque échange est couvert par le secret professionnel de l'avocat.</p>
+      <div class="hero-cta" data-reveal>
+        <a class="btn btn-papier" href="#contact">Réserver mon échange</a>
+        <a class="btn btn-blanc-bord" href="tel:+33744853035">07 44 85 30 35</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== 08 · CONTACT ===================== -->
 <section class="section" id="contact">
