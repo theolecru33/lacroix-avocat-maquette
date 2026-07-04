@@ -53,7 +53,7 @@
   });
 
   /* ---------- Portrait : montée douce à l'arrivée ---------- */
-  var portrait = document.querySelector('.hero-cadre img');
+  var portrait = document.querySelector('.hero-compo img');
   if (portrait) {
     gsap.fromTo(portrait,
       { y: 46 },
