@@ -50,7 +50,7 @@
 
   .rejoindre-actions { flex-direction: row; flex-wrap: wrap; }
 
-  .credentials-liste { justify-content: flex-start; }
+  .credentials-liste { grid-template-columns: repeat(3, 1fr); row-gap: 16px; }
 }
 
 /* ---------- ≤ 640px ---------- */
@@ -71,7 +71,7 @@
   .hero-portrait figcaption { padding-bottom: 14px; }
   .hero-stats li > span { font-size: 0.8438rem; }
 
-  .credentials-liste { gap: 8px 20px; padding-top: 16px; padding-bottom: 16px; }
+  .credentials-liste { grid-template-columns: 1fr 1fr; gap: 12px 20px; padding-top: 16px; padding-bottom: 16px; }
   .credentials-liste span { font-size: 0.7188rem; }
 
   .citation { font-size: 1.1875rem; padding-left: 18px; }

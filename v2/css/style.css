@@ -401,8 +401,7 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
   justify-content: space-between;
   align-items: baseline;
   gap: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 13px 2px 0;
+  padding: 16px 2px 0;
 }
 .hero-portrait figcaption strong {
   font-family: var(--titre);
@@ -448,22 +447,22 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
   color: rgba(255, 255, 255, 0.62);
 }
 
-/* ---------- Bandeau credentials ---------- */
+/* ---------- Bandeau credentials : colonnes égales réglées ---------- */
 .credentials { background: var(--creme); border-bottom: 1px solid var(--filet); }
 .credentials-liste {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 12px 34px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  gap: 14px 28px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 .credentials-liste span {
-  font-size: 0.7813rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--encre);
   opacity: 0.8;
 }
