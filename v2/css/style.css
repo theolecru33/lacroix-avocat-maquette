@@ -450,10 +450,10 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 /* ---------- Bandeau credentials : colonnes égales réglées ---------- */
 .credentials { background: var(--creme); border-bottom: 1px solid var(--filet); }
 .credentials-liste {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
   align-items: center;
-  gap: 14px 28px;
+  justify-content: space-between;
+  gap: 14px 30px;
   padding-top: 22px;
   padding-bottom: 22px;
 }

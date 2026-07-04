@@ -50,7 +50,7 @@
 
   .rejoindre-actions { flex-direction: row; flex-wrap: wrap; }
 
-  .credentials-liste { grid-template-columns: repeat(3, 1fr); row-gap: 16px; }
+  .credentials-liste { display: grid; grid-template-columns: repeat(3, 1fr); justify-content: normal; gap: 16px 24px; }
 }
 
 /* ---------- ≤ 640px ---------- */
