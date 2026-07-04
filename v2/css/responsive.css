@@ -1,0 +1,125 @@
+/* ============================================================
+   LACROIX AVOCAT · V2 responsive (desktop-first)
+   ============================================================ */
+
+/* ---------- ≤ 1240px : header compact ---------- */
+@media (max-width: 1240px) {
+  .nav-principale a { padding: 8px 10px; font-size: 0.875rem; }
+  .header-actions .btn { padding: 10px 16px; font-size: 0.875rem; }
+}
+
+/* ---------- ≤ 1080px : bascule menu burger ---------- */
+@media (max-width: 1080px) {
+  .nav-principale { display: none; }
+  .header-actions .btn-rouge { display: none; }
+  .burger { display: flex; }
+
+  .articles { grid-template-columns: repeat(2, 1fr); }
+  .temoignages { grid-template-columns: 1fr; max-width: 640px; }
+  .qualites { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- ≤ 940px ---------- */
+@media (max-width: 940px) {
+  .hero-grille { grid-template-columns: 1fr; gap: 40px; }
+  .hero-texte { padding-bottom: 0; }
+  .hero-visuel { order: 2; margin-top: 8px; justify-content: flex-start; }
+  .hero-arche { width: min(340px, 86%); }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 26px 0; padding: 30px 0 40px; }
+  .hero-stats li { padding: 0 26px; }
+  .hero-stats li:nth-child(odd) { padding-left: 0; border-left: none; }
+
+  .entete-editoriale { grid-template-columns: 1fr; gap: 18px; margin-bottom: 44px; }
+  .entete-editoriale p { padding-bottom: 0; }
+
+  .cabinet-grille { grid-template-columns: 1fr; gap: 40px; }
+  .cabinet-citation-bloc { position: static; }
+
+  .cartes-offres { grid-template-columns: 1fr; }
+  .formation-grille,
+  .honoraires-grille,
+  .contact-grille,
+  .cta-grille,
+  .rejoindre-bloc { grid-template-columns: 1fr; gap: 40px; }
+
+  .etapes li:first-child { padding-top: 22px; }
+
+  .accordeon-corps { grid-template-columns: 1fr; gap: 28px; padding-left: 0; }
+  .accordeon-corps img { max-width: min(480px, 100%); }
+
+  .rejoindre-actions { flex-direction: row; flex-wrap: wrap; }
+
+  .credentials-liste { justify-content: flex-start; }
+}
+
+/* ---------- ≤ 640px ---------- */
+@media (max-width: 640px) {
+  .conteneur { padding: 0 20px; }
+  .menu-mobile { padding-left: 20px; padding-right: 20px; }
+
+  body { font-size: 1rem; }
+
+  .marque-mark { height: 36px; }
+  .marque-texte { font-size: 0.9375rem; }
+
+  .hero h1 { font-size: clamp(1.95rem, 8vw, 2.7rem); }
+  .hero-intro { font-size: 1.0313rem; }
+  .hero-cta .btn,
+  .cta-bande .hero-cta .btn { width: 100%; }
+  .hero-arche { width: min(300px, 92%); }
+  .hero-badge { padding: 12px 18px; bottom: 24px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats li { padding: 0 18px; }
+  .hero-stats li > span { font-size: 0.8438rem; }
+
+  .credentials-liste { gap: 8px 20px; padding-top: 16px; padding-bottom: 16px; }
+  .credentials-liste span { font-size: 0.7188rem; }
+
+  .citation { font-size: 1.1875rem; padding-left: 18px; }
+  .qualites { grid-template-columns: 1fr 1fr; gap: 18px 20px; margin-top: 44px; }
+
+  .accordeon-entete { gap: 14px; min-height: 74px; padding: 18px 0; }
+  .accordeon-entete:hover { padding-left: 6px; }
+  .accordeon-num { width: 28px; font-size: 0.9375rem; }
+  .accordeon-fleche { width: 44px; height: 44px; }
+
+  .etapes li { gap: 18px; padding: 22px 0; }
+  .etapes .num { width: 48px; height: 48px; }
+  .honoraires-carte { padding: 30px 24px; }
+
+  .articles { grid-template-columns: 1fr; }
+
+  .rejoindre-actions { flex-direction: column; }
+  .rejoindre-actions .btn { width: 100%; }
+
+  .champ-duo { grid-template-columns: 1fr; gap: 0; }
+  .contact-formulaire { padding: 30px 22px; }
+
+  .pied-grille { grid-template-columns: 1fr; gap: 34px; padding-top: 56px; padding-bottom: 40px; }
+  .pied-bas { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---------- ≤ 400px ---------- */
+@media (max-width: 400px) {
+  .qualites { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; }
+  .hero-stats li { padding: 0; border-left: none; }
+}
+
+/* ---------- Anti-zoom iOS : champs 16px minimum ---------- */
+@media (max-width: 1024px) {
+  .champ input,
+  .champ select,
+  .champ textarea { font-size: 16px; }
+}
+
+/* ---------- Mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
