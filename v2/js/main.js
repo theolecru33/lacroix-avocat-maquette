@@ -1,5 +1,6 @@
 /* ============================================================
-   LACROIX AVOCAT · interactions (menu, accordéon, formulaire)
+   LACROIX AVOCAT · V2 « La note » · interactions
+   Menu mobile, questions dépliables, formulaire simulé.
    ============================================================ */
 (function () {
   'use strict';
@@ -9,14 +10,6 @@
   if (!window.gsap) {
     document.documentElement.classList.add('gsap-pret');
   }
-
-  /* ---------- Header : ombre au scroll ---------- */
-  var header = document.querySelector('.site-header');
-  var surScroll = function () {
-    header.classList.toggle('est-scrolle', window.scrollY > 10);
-  };
-  window.addEventListener('scroll', surScroll, { passive: true });
-  surScroll();
 
   /* ---------- Menu mobile ---------- */
   var burger = document.querySelector('.burger');
@@ -44,33 +37,33 @@
     if (e.key === 'Escape' && !menu.hidden) { fermerMenu(); burger.focus(); }
   });
 
-  /* ---------- Accordéon expertises ---------- */
-  var items = document.querySelectorAll('.accordeon-item');
+  /* ---------- Questions dépliables ---------- */
+  var questions = document.querySelectorAll('.question');
 
   var ouvrir = function (item) {
-    var panneau = item.querySelector('.accordeon-panneau');
-    var bouton = item.querySelector('.accordeon-entete');
+    var panneau = item.querySelector('.question-panneau');
+    var bouton = item.querySelector('.question-entete');
     item.classList.add('est-ouvert');
     bouton.setAttribute('aria-expanded', 'true');
     panneau.hidden = false;
     if (window.gsap) {
       gsap.killTweensOf(panneau);
       gsap.fromTo(panneau, { height: 0, opacity: 0 }, {
-        height: 'auto', opacity: 1, duration: 0.45, ease: 'power2.out',
+        height: 'auto', opacity: 1, duration: 0.4, ease: 'power2.out',
         onComplete: function () { panneau.style.height = ''; }
       });
     }
   };
 
   var fermer = function (item) {
-    var panneau = item.querySelector('.accordeon-panneau');
-    var bouton = item.querySelector('.accordeon-entete');
+    var panneau = item.querySelector('.question-panneau');
+    var bouton = item.querySelector('.question-entete');
     item.classList.remove('est-ouvert');
     bouton.setAttribute('aria-expanded', 'false');
     if (window.gsap) {
       gsap.killTweensOf(panneau);
       gsap.to(panneau, {
-        height: 0, opacity: 0, duration: 0.35, ease: 'power2.in',
+        height: 0, opacity: 0, duration: 0.3, ease: 'power2.in',
         onComplete: function () { panneau.hidden = true; panneau.style.height = ''; }
       });
     } else {
@@ -78,17 +71,13 @@
     }
   };
 
-  items.forEach(function (item) {
-    var bouton = item.querySelector('.accordeon-entete');
-    var groupe = item.closest('.accordeon');
+  questions.forEach(function (item) {
+    var bouton = item.querySelector('.question-entete');
     bouton.addEventListener('click', function () {
       var estOuvert = item.classList.contains('est-ouvert');
-      // Un seul panneau ouvert PAR accordéon (les autres accordéons de la page ne bougent pas)
-      if (groupe) {
-        groupe.querySelectorAll('.accordeon-item').forEach(function (autre) {
-          if (autre !== item && autre.classList.contains('est-ouvert')) { fermer(autre); }
-        });
-      }
+      questions.forEach(function (autre) {
+        if (autre !== item && autre.classList.contains('est-ouvert')) { fermer(autre); }
+      });
       if (estOuvert) { fermer(item); } else { ouvrir(item); }
     });
   });

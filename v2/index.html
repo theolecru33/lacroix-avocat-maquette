@@ -21,18 +21,18 @@
 <header class="site-header" id="haut">
   <div class="conteneur header-inner">
     <a class="marque" href="#haut" aria-label="Lacroix Avocat, retour en haut de page">
-      <img src="img/logo-mark-blanc.png" alt="" width="396" height="554" class="marque-mark">
+      <img src="img/logo-mark.png" alt="" width="396" height="554" class="marque-mark">
       <span class="marque-texte">LACROIX <span>AVOCAT</span></span>
     </a>
     <nav class="nav-principale" aria-label="Navigation principale">
-      <a href="#cabinet">Cabinet</a>
       <a href="#expertises">Expertises</a>
+      <a href="#cabinet">Cabinet</a>
       <a href="#honoraires">Honoraires</a>
-      <a href="#formation">Formation</a>
-      <a href="#actualites">Actualités</a>
+      <a href="#questions">Questions</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions">
+      <a class="header-tel" href="tel:+33744853035">07 44 85 30 35</a>
       <a class="btn btn-rouge" href="#contact">Premier échange offert</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
@@ -44,16 +44,15 @@
 <!-- Menu mobile -->
 <div class="menu-mobile" id="menu-mobile" hidden>
   <nav aria-label="Menu mobile">
-    <a href="#cabinet">Cabinet</a>
-    <a href="#expertises">Expertises</a>
-    <a href="#honoraires">Honoraires</a>
-    <a href="#formation">Formation</a>
-    <a href="#actualites">Actualités</a>
-    <a href="#contact">Contact</a>
+    <a href="#expertises"><span class="folio">01</span>Expertises</a>
+    <a href="#cabinet"><span class="folio">02</span>Le cabinet</a>
+    <a href="#honoraires"><span class="folio">03</span>Honoraires</a>
+    <a href="#questions"><span class="folio">06</span>Questions</a>
+    <a href="#contact"><span class="folio">08</span>Contact</a>
   </nav>
   <div class="menu-mobile-pied">
-    <a class="btn btn-rouge" href="#contact">Premier échange 10 minutes offert</a>
-    <a class="btn btn-fantome-clair" href="tel:+33744853035">07 44 85 30 35</a>
+    <a class="btn btn-rouge" href="#contact">Premier échange de 10 minutes offert</a>
+    <a class="btn btn-encre" href="tel:+33744853035">07 44 85 30 35</a>
   </div>
 </div>
 
@@ -61,296 +60,218 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
-  <div class="conteneur hero-grille">
-    <div class="hero-texte">
-      <p class="label label-clair" data-reveal><span class="label-num">01</span>Cabinet d'avocat · Barreau de Bordeaux</p>
-      <h1 data-reveal>Le <span class="souligne">droit social</span>, au service de l'entreprise et des salariés.</h1>
-      <p class="hero-intro" data-reveal>Droit du travail et de la sécurité sociale à Bordeaux. Pour les employeurs comme pour les salariés, du conseil à la défense devant les prud'hommes.</p>
+  <div class="conteneur hero-haut">
+    <div>
+      <h1 data-reveal>Le droit social, <span class="rouge">sans détour</span>.</h1>
+      <p class="hero-sous" data-reveal>Licenciement, rupture conventionnelle, accident du travail, burn-out : à Bordeaux, le cabinet Lacroix conseille et défend les employeurs comme les salariés.</p>
       <div class="hero-cta" data-reveal>
         <a class="btn btn-rouge" href="#contact">Premier échange de 10 minutes offert</a>
-        <a class="btn btn-fantome-clair" href="tel:+33744853035">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg>
-          07 44 85 30 35
-        </a>
+        <a class="btn btn-encre" href="tel:+33744853035">07 44 85 30 35</a>
       </div>
     </div>
-    <div class="hero-visuel" data-reveal>
-      <div class="hero-arche">
-        <picture>
-          <source srcset="img/lionel-lacroix.webp" type="image/webp">
-          <img src="img/lionel-lacroix.png" alt="Maître Lionel Lacroix, avocat en droit social à Bordeaux" width="596" height="918" fetchpriority="high">
-        </picture>
-        <div class="hero-badge">
-          <strong>Maître Lionel Lacroix</strong>
-          <span>Avocat en droit social</span>
-        </div>
-      </div>
-    </div>
+    <aside class="fiche" data-reveal aria-label="Le cabinet en bref">
+      <p class="meta fiche-titre">Le cabinet en bref</p>
+      <dl>
+        <div><dt>Barreau</dt><dd>Bordeaux</dd></div>
+        <div><dt>Exercice</dt><dd>100&nbsp;% droit social</dd></div>
+        <div><dt>Parcours</dt><dd>10 ans et plus en entreprise</dd></div>
+        <div><dt>Premier échange</dt><dd><span class="rouge">Offert, 10 minutes</span></dd></div>
+      </dl>
+    </aside>
   </div>
-  <div class="conteneur">
-    <ul class="hero-stats" data-reveal>
-      <li><strong><span data-compte="10">10</span>+</strong><span>années vécues en entreprise avant de plaider</span></li>
-      <li><strong><span data-compte="100">100</span>&nbsp;%</strong><span>droit social : travail et sécurité sociale</span></li>
-      <li><strong><span data-compte="360">360</span>°</strong><span>de vision sur la santé au travail</span></li>
-      <li><strong>10&nbsp;min</strong><span>de premier échange offert, sans engagement</span></li>
-    </ul>
+
+  <!-- Sommaire -->
+  <nav class="sommaire conteneur" aria-label="Sommaire de la page" data-reveal>
+    <p class="meta sommaire-titre">Sommaire</p>
+    <ol>
+      <li><a href="#expertises"><span class="folio">01</span><span class="sommaire-item">Expertises</span><span class="meta">Travail · Sécurité sociale · RPS</span></a></li>
+      <li><a href="#cabinet"><span class="folio">02</span><span class="sommaire-item">Le cabinet</span><span class="meta">Me Lionel Lacroix</span></a></li>
+      <li><a href="#honoraires"><span class="folio">03</span><span class="sommaire-item">Honoraires</span><span class="meta">Forfait · Convention</span></a></li>
+      <li><a href="#formation"><span class="folio">04</span><span class="sommaire-item">Formation</span><span class="meta">RH · Managers</span></a></li>
+      <li><a href="#temoignages"><span class="folio">05</span><span class="sommaire-item">Témoignages</span><span class="meta">Avis à intégrer</span></a></li>
+      <li><a href="#questions"><span class="folio">06</span><span class="sommaire-item">Questions fréquentes</span><span class="meta">5 réponses</span></a></li>
+      <li><a href="#actualites"><span class="folio">07</span><span class="sommaire-item">Actualités</span><span class="meta">4 articles</span></a></li>
+      <li><a href="#contact"><span class="folio">08</span><span class="sommaire-item">Contact</span><span class="meta">Bordeaux · Visio</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- Affiliations -->
+  <div class="affiliations" data-reveal>
+    <div class="conteneur">
+      <span class="meta">Barreau de Bordeaux</span>
+      <span class="meta">Institut de Droit Social</span>
+      <span class="meta">ACE Aquitaine</span>
+      <span class="meta">SWIM Légal</span>
+      <span class="meta">Master 2 Droit social, Université de Bordeaux</span>
+    </div>
   </div>
 </section>
 
-<!-- Bandeau credentials -->
-<div class="credentials">
-  <div class="conteneur credentials-liste" data-reveal>
-    <span>Barreau de Bordeaux</span>
-    <span>Institut de Droit Social</span>
-    <span>ACE Aquitaine</span>
-    <span>SWIM Légal</span>
-    <span>Master 2 Droit social, Université de Bordeaux</span>
-  </div>
-</div>
-
-<!-- ===================== OFFRES ===================== -->
-<section class="section" id="offres">
+<!-- ===================== 01 · EXPERTISES ===================== -->
+<section class="section" id="expertises">
   <div class="conteneur">
-    <div class="entete-editoriale">
-      <div>
-        <p class="label" data-reveal><span class="label-num">02</span>Nos offres</p>
-        <h2 class="titre-xl" data-reveal>Trois domaines, une seule spécialité : le droit social.</h2>
-      </div>
-      <p data-reveal>Conseil, défense et formation, pour les employeurs comme pour les salariés, à chaque étape de la vie du contrat de travail.</p>
-    </div>
-    <div class="cartes-offres">
-      <article class="carte-offre" data-reveal>
-        <span class="carte-num">01</span>
+    <header class="section-entete">
+      <span class="folio" data-reveal>01</span>
+      <h2 data-reveal>Une pratique entièrement dédiée au droit social.</h2>
+      <p class="section-sous" data-reveal>Conseil, défense et formation, à chaque étape de la vie du contrat de travail.</p>
+    </header>
+
+    <article class="entree" data-reveal>
+      <span class="meta">I.</span>
+      <div class="entree-texte">
         <h3>Droit du travail</h3>
-        <p>Conseils et accompagnement pour vos problématiques professionnelles, de l'embauche à la rupture du contrat.</p>
-        <a class="lien-fleche" href="#expertises">Découvrir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="carte-offre" data-reveal>
-        <span class="carte-num">02</span>
+        <p>De l'embauche à la rupture : rédaction du contrat et des avenants, sanction disciplinaire, inaptitude, reclassement, rupture conventionnelle, licenciement. Conseil au quotidien et défense devant le Conseil de prud'hommes.</p>
+      </div>
+      <div class="entree-mots">
+        <span class="meta">Mots-clés</span>
+        <p>Contrats et avenants · Sanction disciplinaire · Inaptitude · Rupture conventionnelle · Prud'hommes</p>
+      </div>
+    </article>
+
+    <article class="entree" data-reveal>
+      <span class="meta">II.</span>
+      <div class="entree-texte">
         <h3>Droit de la sécurité sociale</h3>
-        <p>Gestion des demandes, recours et accompagnement personnalisé face aux organismes de sécurité sociale.</p>
-        <a class="lien-fleche" href="#expertises">Découvrir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="carte-offre" data-reveal>
-        <span class="carte-num">03</span>
-        <h3>Formation</h3>
-        <p>Formations adaptées pour maîtriser les règles juridiques du droit social.</p>
-        <a class="lien-fleche" href="#formation">Découvrir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
+        <p>Accidents du travail, maladies professionnelles, indemnités journalières, invalidité. Lecture du compte AT/MP, relations avec la CPAM, contentieux devant le pôle social du Tribunal judiciaire.</p>
+      </div>
+      <div class="entree-mots">
+        <span class="meta">Mots-clés</span>
+        <p>Accident du travail · Maladie professionnelle · Indemnités journalières · Compte AT/MP · Contentieux CPAM</p>
+      </div>
+    </article>
+
+    <article class="entree" data-reveal>
+      <span class="meta">III.</span>
+      <div class="entree-texte">
+        <h3>Risques psychosociaux et burn-out</h3>
+        <p>Obligation de sécurité et de prévention, harcèlement, épuisement professionnel. Une approche qui croise le juridique et l'humain, nourrie par une formation de secouriste en santé mentale.</p>
+      </div>
+      <div class="entree-mots">
+        <span class="meta">Mots-clés</span>
+        <p>Obligation de sécurité · Obligation de prévention · Burn-out · Harcèlement</p>
+      </div>
+    </article>
+
+    <article class="entree" data-reveal>
+      <span class="meta">IV.</span>
+      <div class="entree-texte">
+        <h3>Droit de la protection sociale</h3>
+        <p>Handicap et MDPH : AAH, RQTH, CMI, AESH. Retraite, chômage, régime agricole. Une connaissance fine du secteur médico-social et de ses conventions collectives.</p>
+      </div>
+      <div class="entree-mots">
+        <span class="meta">Mots-clés</span>
+        <p>MDPH · RQTH · AAH · Retraite · Régime agricole</p>
+      </div>
+    </article>
+
+    <div class="section-fin" data-reveal>
+      <a class="annotation" href="#contact">Exposer votre situation, premier échange offert</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== CABINET ===================== -->
-<section class="section section-creme" id="cabinet">
+<!-- ===================== 02 · LE CABINET ===================== -->
+<section class="section" id="cabinet">
   <div class="conteneur">
-    <p class="label" data-reveal><span class="label-num">03</span>Le cabinet</p>
+    <header class="section-entete">
+      <span class="folio" data-reveal>02</span>
+      <h2 data-reveal>Un avocat qui vient de votre monde, pas qui le découvre.</h2>
+    </header>
     <div class="cabinet-grille">
-      <div class="cabinet-citation-bloc" data-reveal>
-        <h2 class="titre-xl">« Avant de plaider, <em>construire</em>. »</h2>
-        <p class="cabinet-devise">Être utile. Être humain. Oser.</p>
-      </div>
+      <figure class="cabinet-figure" data-reveal>
+        <div class="cadre">
+          <picture>
+            <source srcset="img/lionel-lacroix.webp" type="image/webp">
+            <img src="img/lionel-lacroix.png" alt="Maître Lionel Lacroix, avocat en droit social à Bordeaux" width="596" height="918">
+          </picture>
+        </div>
+        <figcaption>
+          <span class="meta">Me Lionel Lacroix</span>
+          <span class="meta">Barreau de Bordeaux</span>
+        </figcaption>
+      </figure>
       <div class="cabinet-bio">
         <p data-reveal>Premier CDI signé à 22 ans, débuts à l'Assemblée nationale comme attaché parlementaire, puis plus de dix ans au sein d'un grand groupe privé chargé d'une mission de service public : rédacteur juridique, responsable de commission de recours amiable, audiencier devant le Tribunal des affaires de sécurité sociale.</p>
         <p data-reveal>Médecins-conseils, médecins du travail, ingénieurs en prévention, psychologues, partenaires sociaux : une expérience de terrain avec tous les acteurs de la santé au travail. Secouriste en santé mentale : une double compétence rare, le droit et l'humain.</p>
-        <blockquote class="citation" data-reveal>Un avocat qui vient de votre monde, pas qui le découvre.</blockquote>
+        <ul class="qualites" data-reveal>
+          <li><h3>Battant</h3><p>Défendre vos intérêts sans jamais rien lâcher.</p></li>
+          <li><h3>Stratège</h3><p>Voir les angles, les leviers et les opportunités d'un dossier.</p></li>
+          <li><h3>Franc-parler</h3><p>Un avis clair et direct, au service de vos seuls intérêts.</p></li>
+          <li><h3>Humain</h3><p>Patient, à l'écoute, stable même quand les situations sont lourdes.</p></li>
+        </ul>
       </div>
-    </div>
-    <ul class="qualites">
-      <li data-reveal><h3>Battant</h3><p>Défendre vos intérêts sans jamais rien lâcher.</p></li>
-      <li data-reveal><h3>Stratège</h3><p>Voir les angles, les leviers et les opportunités d'un dossier.</p></li>
-      <li data-reveal><h3>Franc-parler</h3><p>Un avis clair et direct, au service de vos seuls intérêts.</p></li>
-      <li data-reveal><h3>Humain</h3><p>Patient, à l'écoute, stable même quand les situations sont lourdes.</p></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ===================== EXPERTISES ===================== -->
-<section class="section section-nuit" id="expertises">
-  <div class="conteneur">
-    <p class="label label-clair" data-reveal><span class="label-num">04</span>Expertises</p>
-    <h2 class="titre-xl" data-reveal>Une pratique entièrement dédiée au droit social.</h2>
-
-    <div class="accordeon" data-reveal>
-
-      <div class="accordeon-item est-ouvert">
-        <button class="accordeon-entete" type="button" aria-expanded="true" aria-controls="exp-1">
-          <span class="accordeon-num">01</span>
-          <span class="accordeon-titres">
-            <span class="accordeon-titre">Droit du travail</span>
-            <span class="accordeon-sous">Exécution et rupture du contrat</span>
-          </span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="exp-1">
-          <div class="accordeon-corps">
-            <div>
-              <p>De l'embauche à la rupture : rédaction du contrat et des avenants, sanction disciplinaire, inaptitude, reclassement, rupture conventionnelle, licenciement. Conseil au quotidien et défense devant le Conseil de prud'hommes.</p>
-              <ul class="etiquettes">
-                <li>Contrats et avenants</li>
-                <li>Sanction disciplinaire</li>
-                <li>Inaptitude</li>
-                <li>Rupture conventionnelle</li>
-                <li>Prud'hommes</li>
-              </ul>
-            </div>
-            <picture>
-              <source srcset="img/consultation.webp" type="image/webp">
-              <img src="img/consultation.jpg" alt="Consultation juridique autour d'un contrat de travail" width="1080" height="720" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="exp-2">
-          <span class="accordeon-num">02</span>
-          <span class="accordeon-titres">
-            <span class="accordeon-titre">Droit de la sécurité sociale</span>
-            <span class="accordeon-sous">Risques professionnels et prestations</span>
-          </span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="exp-2" hidden>
-          <div class="accordeon-corps">
-            <div>
-              <p>Accidents du travail, maladies professionnelles, indemnités journalières, invalidité. Lecture du compte AT/MP, relations avec la CPAM, contentieux devant le pôle social du Tribunal judiciaire.</p>
-              <ul class="etiquettes">
-                <li>Accident du travail</li>
-                <li>Maladie professionnelle</li>
-                <li>Indemnités journalières</li>
-                <li>Compte AT/MP</li>
-                <li>Contentieux CPAM</li>
-              </ul>
-            </div>
-            <picture>
-              <source srcset="img/expertise-secu.webp" type="image/webp">
-              <img src="img/expertise-secu.jpg" alt="Dossier et documents de sécurité sociale sur un bureau" width="1080" height="720" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="exp-3">
-          <span class="accordeon-num">03</span>
-          <span class="accordeon-titres">
-            <span class="accordeon-titre">Risques psychosociaux et burn-out</span>
-            <span class="accordeon-sous">Prévention et reconnaissance</span>
-          </span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="exp-3" hidden>
-          <div class="accordeon-corps">
-            <div>
-              <p>Obligation de sécurité et de prévention, harcèlement, épuisement professionnel. Une approche qui croise le juridique et l'humain, nourrie par une formation de secouriste en santé mentale.</p>
-              <ul class="etiquettes">
-                <li>Obligation de sécurité</li>
-                <li>Obligation de prévention</li>
-                <li>Burn-out</li>
-                <li>Harcèlement</li>
-              </ul>
-            </div>
-            <picture>
-              <source srcset="img/expertise-rps.webp" type="image/webp">
-              <img src="img/expertise-rps.jpg" alt="Salarié en situation d'épuisement professionnel à son bureau" width="1080" height="720" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="exp-4">
-          <span class="accordeon-num">04</span>
-          <span class="accordeon-titres">
-            <span class="accordeon-titre">Droit de la protection sociale</span>
-            <span class="accordeon-sous">Handicap, retraite, régimes</span>
-          </span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="exp-4" hidden>
-          <div class="accordeon-corps">
-            <div>
-              <p>Handicap et MDPH : AAH, RQTH, CMI, AESH. Retraite, chômage, régime agricole. Une connaissance fine du secteur médico-social et de ses conventions collectives.</p>
-              <ul class="etiquettes">
-                <li>MDPH</li>
-                <li>RQTH</li>
-                <li>AAH</li>
-                <li>Retraite</li>
-                <li>Régime agricole</li>
-              </ul>
-            </div>
-            <picture>
-              <source srcset="img/expertise-protection.webp" type="image/webp">
-              <img src="img/expertise-protection.jpg" alt="Accompagnement et inclusion en milieu professionnel" width="1080" height="720" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===================== HONORAIRES ===================== -->
+<!-- ===================== LA CONVICTION (unique bande sombre) ===================== -->
+<section class="bande-sombre">
+  <div class="conteneur section-corps">
+    <p class="bande-citation" data-reveal>« Avant de plaider, <span class="rouge">construire</span>. »</p>
+    <p class="bande-suite" data-reveal>Plus de dix ans vécus en entreprise avant la robe. La voie de l'accord équilibré chaque fois qu'elle existe, le contentieux chaque fois qu'il le faut.</p>
+    <p class="meta" data-reveal>Être utile · Être humain · Oser</p>
+  </div>
+</section>
+
+<!-- ===================== 03 · HONORAIRES ===================== -->
 <section class="section" id="honoraires">
   <div class="conteneur">
-    <p class="label" data-reveal><span class="label-num">05</span>Honoraires</p>
-    <h2 class="titre-xl" data-reveal>Transparents, fixés à l'avance, sans surprise.</h2>
-    <div class="honoraires-grille">
-      <ol class="etapes">
-        <li data-reveal>
-          <span class="num">01</span>
-          <div>
-            <h3>Premier échange offert</h3>
-            <p>Dix minutes, par téléphone ou en visio, pour exposer votre situation. Une réponse claire : votre dossier peut-il être pris en charge, et de quelle façon.</p>
-          </div>
-        </li>
-        <li data-reveal>
-          <span class="num">02</span>
-          <div>
-            <h3>Consultation</h3>
-            <p>Un échange direct avec Maître Lacroix : analyse, conseil, stratégie. Vous repartez avec une direction claire.</p>
-          </div>
-        </li>
-        <li data-reveal>
-          <span class="num">03</span>
-          <div>
-            <h3>Mission et convention</h3>
-            <p>Une convention d'honoraires précise la mission et son coût. Le forfait est privilégié : un montant global, connu à l'avance.</p>
-          </div>
-        </li>
-      </ol>
-      <aside class="honoraires-carte" data-reveal>
-        <h3>Bon à savoir</h3>
-        <ul>
-          <li>Forfait privilégié plutôt que facturation au temps passé</li>
-          <li>Honoraire de résultat possible sur les sommes obtenues</li>
-          <li>Paiement échelonné en 2 ou 3 provisions pour le judiciaire</li>
-          <li>Votre assurance de protection juridique peut couvrir une partie des honoraires</li>
-          <li>Aide juridictionnelle : uniquement contentieux MDPH et CPAM</li>
-        </ul>
-        <a class="btn btn-rouge btn-large" href="#contact">Demander un devis</a>
-      </aside>
+    <header class="section-entete">
+      <span class="folio" data-reveal>03</span>
+      <h2 data-reveal>Des honoraires transparents, fixés à l'avance.</h2>
+    </header>
+
+    <ol class="etapes">
+      <li data-reveal>
+        <span class="meta">01</span>
+        <h3>Premier échange offert</h3>
+        <p>Dix minutes, par téléphone ou en visio, pour exposer votre situation. Une réponse claire : votre dossier peut-il être pris en charge, et de quelle façon.</p>
+      </li>
+      <li data-reveal>
+        <span class="meta">02</span>
+        <h3>Consultation</h3>
+        <p>Un échange direct avec Maître Lacroix : analyse, conseil, stratégie. Vous repartez avec une direction claire.</p>
+      </li>
+      <li data-reveal>
+        <span class="meta">03</span>
+        <h3>Mission et convention</h3>
+        <p>Une convention d'honoraires précise la mission et son coût. Le forfait est privilégié : un montant global, connu à l'avance.</p>
+      </li>
+    </ol>
+
+    <div class="principes section-corps" data-reveal>
+      <div>
+        <p class="meta principes-titre">Principes de facturation</p>
+        <table>
+          <tbody>
+            <tr><th scope="row">Forfait</th><td>La facturation au forfait est privilégiée plutôt que le temps passé : un montant global, fixé à l'avance dans la convention d'honoraires.</td></tr>
+            <tr><th scope="row">Honoraire de résultat</th><td>Possible sur les sommes obtenues, selon les modalités prévues dans la convention.</td></tr>
+            <tr><th scope="row">Règlement</th><td>Paiement échelonné en 2 ou 3 provisions pour les dossiers judiciaires.</td></tr>
+            <tr><th scope="row">Protection juridique</th><td>Votre assurance peut couvrir une partie des honoraires, selon les garanties de votre contrat.</td></tr>
+            <tr><th scope="row">Aide juridictionnelle</th><td>Non acceptée en droit du travail, à l'exception des contentieux MDPH et CPAM devant le Tribunal judiciaire.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section-fin" data-reveal>
+      <a class="annotation" href="#contact">Demander un devis</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== FORMATION ===================== -->
-<section class="section section-creme" id="formation">
+<!-- ===================== 04 · FORMATION ===================== -->
+<section class="section" id="formation">
   <div class="conteneur">
-    <div class="entete-editoriale">
-      <div>
-        <p class="label" data-reveal><span class="label-num">06</span>Formation</p>
-        <h2 class="titre-xl" data-reveal>Former vos équipes au droit social.</h2>
-      </div>
-      <p data-reveal>Des formations auprès des employeurs, des services RH et des managers, pour transmettre des réflexes concrets et prévenir les contentieux, en présentiel comme à distance.</p>
-    </div>
-    <div class="formation-grille">
-      <article class="formation-carte" data-reveal>
-        <span class="carte-icone" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18M5 4v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4"/><path d="M12 16v4M8 20h8"/></svg>
-        </span>
+    <header class="section-entete">
+      <span class="folio" data-reveal>04</span>
+      <h2 data-reveal>Former vos équipes au droit social.</h2>
+      <p class="section-sous" data-reveal>Des formations auprès des employeurs, des services RH et des managers, pour transmettre des réflexes concrets et prévenir les contentieux, en présentiel comme à distance.</p>
+    </header>
+
+    <div class="formation-grille section-corps">
+      <div class="formation-col" data-reveal>
+        <span class="meta">Programme A</span>
         <h3>Droit du travail</h3>
         <p>Rester à jour et sécuriser vos pratiques au quotidien.</p>
         <ul>
@@ -358,11 +279,9 @@
           <li>Prévention des risques professionnels</li>
           <li>Mise à jour de votre documentation interne</li>
         </ul>
-      </article>
-      <article class="formation-carte" data-reveal>
-        <span class="carte-icone" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
-        </span>
+      </div>
+      <div class="formation-col" data-reveal>
+        <span class="meta">Programme B</span>
         <h3>Droit de la sécurité sociale</h3>
         <p>Maîtriser la chaîne de la santé au travail.</p>
         <ul>
@@ -370,229 +289,163 @@
           <li>Comprendre les attendus de la CPAM</li>
           <li>Gérer le maintien de salaire, préparer un retour au poste</li>
         </ul>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== TÉMOIGNAGES ===================== -->
+<!-- ===================== 05 · TÉMOIGNAGES ===================== -->
 <section class="section" id="temoignages">
   <div class="conteneur">
-    <p class="label" data-reveal><span class="label-num">07</span>Témoignages</p>
-    <h2 class="titre-xl" data-reveal>Ils ont fait appel au cabinet.</h2>
-    <div class="temoignages">
-      <figure class="temoignage" data-reveal>
-        <span class="temoignage-guillemet" aria-hidden="true">«</span>
-        <blockquote>Un accompagnement clair et humain du début à la fin. J'ai toujours su où j'en étais dans mon dossier.</blockquote>
-        <figcaption>Avis à intégrer<span>Témoignage client</span></figcaption>
+    <header class="section-entete">
+      <span class="folio" data-reveal>05</span>
+      <h2 data-reveal>Ils ont fait appel au cabinet.</h2>
+    </header>
+    <div class="citations">
+      <figure class="citation-tiree" data-reveal>
+        <blockquote>« Un accompagnement clair et humain du début à la fin. J'ai toujours su où j'en étais dans mon dossier. »</blockquote>
+        <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Témoignage client</span></figcaption>
       </figure>
-      <figure class="temoignage" data-reveal>
-        <span class="temoignage-guillemet" aria-hidden="true">«</span>
-        <blockquote>En tant qu'employeur, j'ai apprécié sa connaissance fine du terrain et sa franchise sur les risques.</blockquote>
-        <figcaption>Avis à intégrer<span>Dirigeant de PME</span></figcaption>
+      <figure class="citation-tiree" data-reveal>
+        <blockquote>« En tant qu'employeur, j'ai apprécié sa connaissance fine du terrain et sa franchise sur les risques. »</blockquote>
+        <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Dirigeant de PME</span></figcaption>
       </figure>
-      <figure class="temoignage" data-reveal>
-        <span class="temoignage-guillemet" aria-hidden="true">«</span>
-        <blockquote>Une vraie écoute sur une situation de burn-out, et une stratégie qui a abouti à un accord équilibré.</blockquote>
-        <figcaption>Avis à intégrer<span>Salariée</span></figcaption>
+      <figure class="citation-tiree" data-reveal>
+        <blockquote>« Une vraie écoute sur une situation de burn-out, et une stratégie qui a abouti à un accord équilibré. »</blockquote>
+        <figcaption><span class="meta">Avis à intégrer</span><span class="meta">Salariée</span></figcaption>
       </figure>
     </div>
-    <p class="temoignages-note" data-reveal>Exemples de mise en page. Les avis réels de Maître Lacroix seront intégrés ici avant la mise en ligne.</p>
+    <p class="citations-note" data-reveal>Exemples de mise en page. Les avis réels de Maître Lacroix seront intégrés ici avant la mise en ligne.</p>
   </div>
 </section>
 
-<!-- ===================== FAQ ===================== -->
-<section class="section section-creme" id="faq">
+<!-- ===================== 06 · QUESTIONS ===================== -->
+<section class="section" id="questions">
   <div class="conteneur">
-    <p class="label" data-reveal><span class="label-num">08</span>Questions fréquentes</p>
-    <h2 class="titre-xl" data-reveal>Vos questions, nos réponses.</h2>
-    <div class="accordeon faq" data-reveal>
+    <header class="section-entete">
+      <span class="folio" data-reveal>06</span>
+      <h2 data-reveal>Vos questions, nos réponses.</h2>
+    </header>
 
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="faq-1">
-          <span class="accordeon-titres"><span class="accordeon-titre">Accompagnez-vous les employeurs comme les salariés ?</span></span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="faq-1" hidden>
-          <div class="accordeon-corps"><div><p>Oui, les deux. Le cabinet intervient auprès des dirigeants, des TPE et PME et des structures du secteur médico-social, comme auprès des salariés, en conseil comme en contentieux.</p></div></div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="faq-2">
-          <span class="accordeon-titres"><span class="accordeon-titre">Comment se passe le premier échange ?</span></span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="faq-2" hidden>
-          <div class="accordeon-corps"><div><p>Le premier échange de dix minutes est offert, par téléphone ou en visio. Il sert à cerner votre besoin et à déterminer si le cabinet peut vous aider. Chaque échange est couvert par le secret professionnel de l'avocat.</p></div></div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="faq-3">
-          <span class="accordeon-titres"><span class="accordeon-titre">Comment sont fixés vos honoraires ?</span></span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="faq-3" hidden>
-          <div class="accordeon-corps"><div><p>Le forfait est privilégié : un montant global, fixé à l'avance et précisé dans une convention d'honoraires. Un honoraire de résultat est possible sur les sommes obtenues. Votre assurance de protection juridique peut couvrir une partie des frais.</p></div></div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="faq-4">
-          <span class="accordeon-titres"><span class="accordeon-titre">Intervenez-vous devant les tribunaux ?</span></span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="faq-4" hidden>
-          <div class="accordeon-corps"><div><p>Oui : Conseil de prud'hommes, pôle social du Tribunal judiciaire et Cour d'appel. La voie de l'accord équilibré reste toutefois privilégiée chaque fois qu'elle est possible.</p></div></div>
-        </div>
-      </div>
-
-      <div class="accordeon-item">
-        <button class="accordeon-entete" type="button" aria-expanded="false" aria-controls="faq-5">
-          <span class="accordeon-titres"><span class="accordeon-titre">Acceptez-vous l'aide juridictionnelle ?</span></span>
-          <span class="accordeon-fleche" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="accordeon-panneau" id="faq-5" hidden>
-          <div class="accordeon-corps"><div><p>L'aide juridictionnelle n'est pas acceptée en droit du travail, à l'exception des contentieux MDPH et CPAM portés devant le Tribunal judiciaire.</p></div></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== NOUS REJOINDRE ===================== -->
-<section class="section" id="nous-rejoindre">
-  <div class="conteneur">
-    <div class="rejoindre-bloc" data-reveal>
+    <div class="questions section-corps" data-reveal>
       <div>
-        <h2>Collaborer avec le cabinet</h2>
-        <p>Le cabinet accueille volontiers les collaborateurs, élèves-avocats et stagiaires qui partagent une exigence : allier rigueur juridique et sens de l'humain. Envie de rejoindre une pratique 100 % droit social, tournée vers l'entreprise ?</p>
-      </div>
-      <div class="rejoindre-actions">
-        <a class="btn btn-rouge" href="mailto:lionel.lacroix@avocat.fr">Envoyer une candidature</a>
-        <a class="btn btn-fantome-sombre" href="#contact">Nous contacter</a>
+        <div class="question">
+          <button class="question-entete" type="button" aria-expanded="false" aria-controls="q-1">
+            <span class="question-titre">Accompagnez-vous les employeurs comme les salariés ?</span>
+            <span class="question-signe" aria-hidden="true">+</span>
+          </button>
+          <div class="question-panneau" id="q-1" hidden>
+            <div class="question-corps"><p>Oui, les deux. Le cabinet intervient auprès des dirigeants, des TPE et PME et des structures du secteur médico-social, comme auprès des salariés, en conseil comme en contentieux.</p></div>
+          </div>
+        </div>
+        <div class="question">
+          <button class="question-entete" type="button" aria-expanded="false" aria-controls="q-2">
+            <span class="question-titre">Comment se passe le premier échange ?</span>
+            <span class="question-signe" aria-hidden="true">+</span>
+          </button>
+          <div class="question-panneau" id="q-2" hidden>
+            <div class="question-corps"><p>Le premier échange de dix minutes est offert, par téléphone ou en visio. Il sert à cerner votre besoin et à déterminer si le cabinet peut vous aider. Chaque échange est couvert par le secret professionnel de l'avocat.</p></div>
+          </div>
+        </div>
+        <div class="question">
+          <button class="question-entete" type="button" aria-expanded="false" aria-controls="q-3">
+            <span class="question-titre">Comment sont fixés vos honoraires ?</span>
+            <span class="question-signe" aria-hidden="true">+</span>
+          </button>
+          <div class="question-panneau" id="q-3" hidden>
+            <div class="question-corps"><p>Le forfait est privilégié : un montant global, fixé à l'avance et précisé dans une convention d'honoraires. Un honoraire de résultat est possible sur les sommes obtenues. Votre assurance de protection juridique peut couvrir une partie des frais.</p></div>
+          </div>
+        </div>
+        <div class="question">
+          <button class="question-entete" type="button" aria-expanded="false" aria-controls="q-4">
+            <span class="question-titre">Intervenez-vous devant les tribunaux ?</span>
+            <span class="question-signe" aria-hidden="true">+</span>
+          </button>
+          <div class="question-panneau" id="q-4" hidden>
+            <div class="question-corps"><p>Oui : Conseil de prud'hommes, pôle social du Tribunal judiciaire et Cour d'appel. La voie de l'accord équilibré reste toutefois privilégiée chaque fois qu'elle est possible.</p></div>
+          </div>
+        </div>
+        <div class="question">
+          <button class="question-entete" type="button" aria-expanded="false" aria-controls="q-5">
+            <span class="question-titre">Acceptez-vous l'aide juridictionnelle ?</span>
+            <span class="question-signe" aria-hidden="true">+</span>
+          </button>
+          <div class="question-panneau" id="q-5" hidden>
+            <div class="question-corps"><p>L'aide juridictionnelle n'est pas acceptée en droit du travail, à l'exception des contentieux MDPH et CPAM portés devant le Tribunal judiciaire.</p></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== ACTUALITÉS ===================== -->
-<section class="section section-creme" id="actualites">
+<!-- ===================== 07 · ACTUALITÉS ===================== -->
+<section class="section" id="actualites">
   <div class="conteneur">
-    <div class="entete-editoriale">
-      <div>
-        <p class="label" data-reveal><span class="label-num">09</span>Actualités</p>
-        <h2 class="titre-xl" data-reveal>Des articles clairs pour comprendre vos droits.</h2>
-      </div>
-      <p data-reveal>Des sujets choisis pour leur utilité concrète : rupture conventionnelle, burn-out, obligations de l'employeur.</p>
-    </div>
-    <div class="articles">
-      <article class="article-carte" data-reveal>
-        <p class="article-meta"><span class="article-tag">Droit du travail</span><time datetime="2025-02">Février 2025</time></p>
-        <h3>Rupture conventionnelle : accord mutuel</h3>
-        <p>Les conditions d'un accord librement consenti, la procédure et les pièges à éviter, côté employeur comme côté salarié.</p>
-        <a class="lien-fleche" href="https://lacroix-avocat.fr/rupture-conventionnelle-accord-mutuel/" target="_blank" rel="noopener">Lire l'article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="article-carte" data-reveal>
-        <p class="article-meta"><span class="article-tag">Sécurité sociale</span><time datetime="2024-07">Juillet 2024</time></p>
-        <h3>Burn-out, risques psychosociaux : définition</h3>
-        <p>Ce que recouvrent vraiment l'épuisement professionnel et les risques psychosociaux, et comment le droit les appréhende.</p>
-        <a class="lien-fleche" href="https://lacroix-avocat.fr/burn-out-risques-psychosociaux-definition/" target="_blank" rel="noopener">Lire l'article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="article-carte" data-reveal>
-        <p class="article-meta"><span class="article-tag">Droit du travail</span><time datetime="2024-06">Juin 2024</time></p>
-        <h3>Obligation de sécurité</h3>
-        <p>L'employeur doit protéger la santé physique et mentale de ses salariés. Contours et conséquences d'une obligation clé.</p>
-        <a class="lien-fleche" href="https://lacroix-avocat.fr/obligation-de-securite/" target="_blank" rel="noopener">Lire l'article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
-      <article class="article-carte" data-reveal>
-        <p class="article-meta"><span class="article-tag">Droit du travail</span><time datetime="2024-05">Mai 2024</time></p>
-        <h3>Obligation de prévention</h3>
-        <p>Prévenir plutôt que réparer : ce que la loi impose concrètement aux employeurs en matière de prévention des risques.</p>
-        <a class="lien-fleche" href="https://lacroix-avocat.fr/obligation-de-prevention/" target="_blank" rel="noopener">Lire l'article<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </article>
+    <header class="section-entete">
+      <span class="folio" data-reveal>07</span>
+      <h2 data-reveal>Des articles clairs pour comprendre vos droits.</h2>
+    </header>
+    <div class="journal" data-reveal>
+      <a href="https://lacroix-avocat.fr/rupture-conventionnelle-accord-mutuel/" target="_blank" rel="noopener">
+        <time datetime="2025-02">Février 2025</time>
+        <span class="journal-titre">Rupture conventionnelle : accord mutuel</span>
+        <span class="meta">Droit du travail</span>
+        <span class="journal-fleche" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="https://lacroix-avocat.fr/burn-out-risques-psychosociaux-definition/" target="_blank" rel="noopener">
+        <time datetime="2024-07">Juillet 2024</time>
+        <span class="journal-titre">Burn-out, risques psychosociaux : définition</span>
+        <span class="meta">Sécurité sociale</span>
+        <span class="journal-fleche" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="https://lacroix-avocat.fr/obligation-de-securite/" target="_blank" rel="noopener">
+        <time datetime="2024-06">Juin 2024</time>
+        <span class="journal-titre">Obligation de sécurité</span>
+        <span class="meta">Droit du travail</span>
+        <span class="journal-fleche" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="https://lacroix-avocat.fr/obligation-de-prevention/" target="_blank" rel="noopener">
+        <time datetime="2024-05">Mai 2024</time>
+        <span class="journal-titre">Obligation de prévention</span>
+        <span class="meta">Droit du travail</span>
+        <span class="journal-fleche" aria-hidden="true">&#8594;</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===================== BANDEAU CTA ===================== -->
-<section class="cta-bande">
-  <div class="conteneur cta-grille">
-    <div data-reveal>
-      <p class="label label-clair"><span class="label-num">10</span>Premier pas</p>
-      <h2>Votre premier échange de 10 minutes, offert.</h2>
-      <p class="cta-sous">Un appel ou un message suffit. Le cabinet vous répond du lundi au vendredi, de 8&nbsp;h à 19&nbsp;h.</p>
-      <div class="hero-cta">
-        <a class="btn btn-rouge" href="#contact">Réserver mon échange</a>
-        <a class="btn btn-fantome-clair" href="tel:+33744853035">07 44 85 30 35</a>
-      </div>
-    </div>
-    <figure class="cta-visuel" data-reveal>
-      <picture>
-        <source srcset="img/bordeaux.webp" type="image/webp">
-        <img src="img/bordeaux.jpg" alt="Place bordelaise et tramway, à deux pas du cabinet" width="1080" height="771" loading="lazy">
-      </picture>
-    </figure>
-  </div>
-</section>
+<!-- ===================== PHOTO PLEINE PAGE ===================== -->
+<figure class="pleine-page">
+  <picture>
+    <source srcset="img/bordeaux.webp" type="image/webp">
+    <img src="img/bordeaux.jpg" alt="Place de la Bourse et tramway, Bordeaux" width="1080" height="771" loading="lazy">
+  </picture>
+  <figcaption>
+    <span class="meta">Place de la Bourse, Bordeaux</span>
+    <span class="meta">Cabinet : arrêt Palais de Justice</span>
+  </figcaption>
+</figure>
 
-<!-- ===================== CONTACT ===================== -->
+<!-- ===================== 08 · CONTACT ===================== -->
 <section class="section" id="contact">
   <div class="conteneur">
-    <p class="label" data-reveal><span class="label-num">11</span>Contact</p>
-    <h2 class="titre-xl" data-reveal>Parlons de votre situation.</h2>
-    <div class="contact-grille">
+    <header class="section-entete">
+      <span class="folio" data-reveal>08</span>
+      <h2 data-reveal>Parlons de votre situation.</h2>
+    </header>
 
-      <div class="contact-infos">
-        <ul class="contact-liste">
-          <li data-reveal>
-            <span class="contact-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div>
-              <h3>Le cabinet</h3>
-              <p>11, rue Servandoni<br>33000 Bordeaux</p>
-              <p class="contact-note">Tram et bus : arrêt Palais de Justice · Parking République</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="contact-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>
-            <div>
-              <h3>Téléphone</h3>
-              <p><a href="tel:+33744853035">07 44 85 30 35</a></p>
-              <p class="contact-note">Du lundi au vendredi, de 8&nbsp;h à 19&nbsp;h</p>
-            </div>
-          </li>
-          <li data-reveal>
-            <span class="contact-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
-            <div>
-              <h3>Email</h3>
-              <p><a href="mailto:lionel.lacroix@avocat.fr">lionel.lacroix@avocat.fr</a></p>
-              <p class="contact-note">Échange couvert par le secret professionnel</p>
-            </div>
-          </li>
-        </ul>
-        <div class="contact-rdv" data-reveal>
-          <h3>Prendre rendez-vous en ligne</h3>
-          <p>Réservez votre créneau directement dans l'agenda du cabinet, sans échange de mails.</p>
-          <a class="btn btn-fantome-sombre" href="#contact">Ouvrir l'agenda en ligne</a>
-        </div>
-        <div class="contact-modes" data-reveal>
-          <h3>À votre convenance</h3>
-          <ul>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M9 8h2m2 0h2M9 12h2m2 0h2M9 16h2m2 0h2"/></svg>
-              Au cabinet, à Bordeaux
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="M22 8l-6 4 6 4z"/></svg>
-              En visio ou par téléphone
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-              Dans votre entreprise
-            </li>
-          </ul>
+    <div class="contact-grille">
+      <div>
+        <dl class="coordonnees" data-reveal>
+          <div><dt>Adresse</dt><dd>11, rue Servandoni<br>33000 Bordeaux<span class="contact-note">Tram et bus : arrêt Palais de Justice · Parking République</span></dd></div>
+          <div><dt>Téléphone</dt><dd><a href="tel:+33744853035">07 44 85 30 35</a><span class="contact-note">Du lundi au vendredi, de 8&nbsp;h à 19&nbsp;h</span></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:lionel.lacroix@avocat.fr">lionel.lacroix@avocat.fr</a><span class="contact-note">Échange couvert par le secret professionnel</span></dd></div>
+          <div><dt>Rendez-vous</dt><dd>Au cabinet · En visio ou par téléphone · Dans votre entreprise</dd></div>
+        </dl>
+        <div class="contact-annexe" data-reveal>
+          <p>Vous préférez réserver directement un créneau dans l'agenda du cabinet, sans échange de mails ?</p>
+          <a class="annotation" href="#contact">Ouvrir l'agenda en ligne</a>
         </div>
       </div>
 
@@ -604,7 +457,7 @@
             <input type="text" id="f-nom" name="nom" autocomplete="family-name" required>
           </div>
           <div class="champ">
-            <label for="f-tel">Téléphone</label>
+            <label for="f-tel">Téléphone (facultatif)</label>
             <input type="tel" id="f-tel" name="telephone" autocomplete="tel">
           </div>
         </div>
@@ -622,20 +475,19 @@
         </div>
         <div class="champ">
           <label for="f-message">Votre message</label>
-          <textarea id="f-message" name="message" rows="5" required></textarea>
+          <textarea id="f-message" name="message" rows="4" required></textarea>
         </div>
         <button class="btn btn-rouge btn-large" type="submit">Réserver mon échange offert</button>
         <p class="formulaire-note">Premier échange de 10 minutes offert, couvert par le secret professionnel de l'avocat. Vos informations sont transmises à Maître Lacroix pour répondre à votre demande, ne sont jamais communiquées à des tiers, et vous disposez d'un droit d'accès, de rectification et d'effacement (voir la <a href="confidentialite.html">politique de confidentialité</a>).</p>
         <p class="formulaire-succes" hidden>Merci, votre demande a bien été prise en compte. Le cabinet revient vers vous rapidement.</p>
       </form>
-
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
+<!-- ===================== COLOPHON ===================== -->
 <footer class="site-pied">
   <div class="conteneur pied-grille">
     <div class="pied-marque">
@@ -645,32 +497,32 @@
       </picture>
       <p>Avocat en droit du travail et de la sécurité sociale au Barreau de Bordeaux. Employeurs et salariés.</p>
     </div>
-    <nav class="pied-colonne" aria-label="Le cabinet">
-      <h3>Le cabinet</h3>
-      <a href="#cabinet">Cabinet</a>
+    <nav class="pied-colonne" aria-label="Sommaire">
+      <h3>Sommaire</h3>
       <a href="#expertises">Expertises</a>
+      <a href="#cabinet">Le cabinet</a>
       <a href="#honoraires">Honoraires</a>
-      <a href="#formation">Formation</a>
-      <a href="#nous-rejoindre">Nous rejoindre</a>
-    </nav>
-    <nav class="pied-colonne" aria-label="Ressources">
-      <h3>Ressources</h3>
-      <a href="#faq">FAQ</a>
-      <a href="#temoignages">Témoignages</a>
       <a href="#actualites">Actualités</a>
-      <a href="#contact">Contact</a>
     </nav>
     <div class="pied-colonne">
       <h3>Contact</h3>
-      <p>11, rue Servandoni<br>33000 Bordeaux</p>
       <a href="tel:+33744853035">07 44 85 30 35</a>
       <a href="mailto:lionel.lacroix@avocat.fr">lionel.lacroix@avocat.fr</a>
       <a href="#" rel="noopener">LinkedIn</a>
     </div>
+    <div class="pied-colonne">
+      <h3>Cabinet</h3>
+      <p>11, rue Servandoni<br>33000 Bordeaux</p>
+      <p>Du lundi au vendredi<br>de 8&nbsp;h à 19&nbsp;h</p>
+    </div>
+  </div>
+  <div class="conteneur pied-recrutement">
+    Collaborateurs, élèves-avocats, stagiaires : les candidatures sont bienvenues à <a href="mailto:lionel.lacroix@avocat.fr">lionel.lacroix@avocat.fr</a>.
   </div>
   <div class="conteneur pied-bas">
     <p>© 2026 Lacroix Avocat · Barreau de Bordeaux</p>
     <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a></p>
+    <p class="meta">Bordeaux · 44.84° N, 0.58° O</p>
   </div>
 </footer>
 

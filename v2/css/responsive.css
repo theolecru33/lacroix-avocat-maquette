@@ -1,109 +1,97 @@
 /* ============================================================
-   LACROIX AVOCAT · V2 responsive (desktop-first)
+   LACROIX AVOCAT · V2 « La note » · responsive (desktop-first)
    ============================================================ */
 
-/* ---------- ≤ 1240px : header compact ---------- */
-@media (max-width: 1240px) {
-  .nav-principale a { padding: 8px 10px; font-size: 0.875rem; }
-  .header-actions .btn { padding: 10px 16px; font-size: 0.875rem; }
+/* ---------- ≤ 1180px : header compact ---------- */
+@media (max-width: 1180px) {
+  .nav-principale { gap: 18px; }
+  .nav-principale a { font-size: 0.875rem; }
+  .header-actions { gap: 14px; }
 }
 
-/* ---------- ≤ 1080px : bascule menu burger ---------- */
-@media (max-width: 1080px) {
+/* ---------- ≤ 1024px : bascule menu burger ---------- */
+@media (max-width: 1024px) {
   .nav-principale { display: none; }
-  .header-actions .btn-rouge { display: none; }
+  .header-actions .btn { display: none; }
   .burger { display: flex; }
 
-  .articles { grid-template-columns: repeat(2, 1fr); }
-  .temoignages { grid-template-columns: 1fr; max-width: 640px; }
-  .qualites { grid-template-columns: repeat(2, 1fr); }
+  .citations { grid-template-columns: 1fr; gap: 26px; }
+  .citation-tiree blockquote { max-width: 34em; }
 }
 
-/* ---------- ≤ 940px ---------- */
-@media (max-width: 940px) {
-  .hero-grille { grid-template-columns: 1fr; gap: 40px; }
-  .hero-texte { padding-bottom: 0; }
-  .hero-visuel { order: 2; margin-top: 8px; justify-content: flex-start; }
-  .hero-arche { width: min(340px, 86%); }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 26px 0; padding: 30px 0 40px; }
-  .hero-stats li { padding: 0 26px; }
-  .hero-stats li:nth-child(odd) { padding-left: 0; border-left: none; }
+/* ---------- ≤ 900px ---------- */
+@media (max-width: 900px) {
+  .hero-haut { grid-template-columns: 1fr; gap: 40px; }
+  .fiche { max-width: 480px; }
 
-  .entete-editoriale { grid-template-columns: 1fr; gap: 18px; margin-bottom: 44px; }
-  .entete-editoriale p { padding-bottom: 0; }
+  .section-entete { grid-template-columns: 1fr; gap: 10px 0; }
+  .section-entete .folio { padding-top: 0; }
+  .section-entete .section-sous { grid-column: 1; }
+  .section-corps { grid-template-columns: 1fr; }
+  .section-corps > * { grid-column: 1; }
+  .section-fin { grid-template-columns: 1fr; }
+  .section-fin > * { grid-column: 1; }
 
-  .cabinet-grille { grid-template-columns: 1fr; gap: 40px; }
-  .cabinet-citation-bloc { position: static; }
+  .entree { grid-template-columns: 1fr; gap: 14px; }
+  .entree > .meta { display: none; }
+  .entree-mots { max-width: 480px; }
 
-  .cartes-offres { grid-template-columns: 1fr; }
-  .formation-grille,
-  .honoraires-grille,
-  .contact-grille,
-  .cta-grille,
-  .rejoindre-bloc { grid-template-columns: 1fr; gap: 40px; }
+  .cabinet-grille { grid-template-columns: 1fr; gap: 36px; }
+  .cabinet-figure { max-width: 400px; }
 
-  .etapes li:first-child { padding-top: 22px; }
+  .etapes li { grid-template-columns: minmax(44px, auto) 1fr; }
+  .etapes li p { grid-column: 2; }
 
-  .accordeon-corps { grid-template-columns: 1fr; gap: 28px; padding-left: 0; }
-  .accordeon-corps img { max-width: min(480px, 100%); }
+  .formation-grille { grid-template-columns: 1fr; gap: 30px; }
 
-  .rejoindre-actions { flex-direction: row; flex-wrap: wrap; }
+  .journal a { grid-template-columns: minmax(0, 1fr) auto; row-gap: 4px; }
+  .journal a time { grid-column: 1; order: 2; }
+  .journal a .journal-titre { grid-column: 1; order: 1; }
+  .journal a .meta { display: none; }
+  .journal a .journal-fleche { grid-row: 1 / span 2; align-self: center; }
 
-  .credentials-liste { justify-content: flex-start; }
+  .contact-grille { grid-template-columns: 1fr; gap: 44px; }
+
+  .pied-grille { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 
 /* ---------- ≤ 640px ---------- */
 @media (max-width: 640px) {
-  .conteneur { padding: 0 20px; }
-  .menu-mobile { padding-left: 20px; padding-right: 20px; }
-
   body { font-size: 1rem; }
 
-  .marque-mark { height: 36px; }
-  .marque-texte { font-size: 0.9375rem; }
+  .marque-mark { height: 30px; }
+  .marque-texte { font-size: 0.875rem; }
+  .header-tel { display: none; }
 
-  .hero h1 { font-size: clamp(1.95rem, 8vw, 2.7rem); }
-  .hero-intro { font-size: 1.0313rem; }
-  .hero-cta .btn,
-  .cta-bande .hero-cta .btn { width: 100%; }
-  .hero-arche { width: min(300px, 92%); }
-  .hero-badge { padding: 12px 18px; bottom: 24px; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .hero-stats li { padding: 0 18px; }
-  .hero-stats li > span { font-size: 0.8438rem; }
+  .hero { padding-top: 44px; }
+  .hero h1 { font-size: clamp(2.2rem, 10vw, 2.9rem); }
+  .hero-sous { font-size: 1.0313rem; }
+  .hero-cta .btn { width: 100%; }
 
-  .credentials-liste { gap: 8px 20px; padding-top: 16px; padding-bottom: 16px; }
-  .credentials-liste span { font-size: 0.7188rem; }
+  .sommaire a { grid-template-columns: minmax(40px, auto) 1fr; min-height: 52px; padding: 13px 0; }
+  .sommaire a .meta { display: none; }
 
-  .citation { font-size: 1.1875rem; padding-left: 18px; }
-  .qualites { grid-template-columns: 1fr 1fr; gap: 18px 20px; margin-top: 44px; }
+  .affiliations .conteneur { gap: 8px 22px; }
+  .affiliations .meta { font-size: 0.6563rem; }
 
-  .accordeon-entete { gap: 14px; min-height: 74px; padding: 18px 0; }
-  .accordeon-entete:hover { padding-left: 6px; }
-  .accordeon-num { width: 28px; font-size: 0.9375rem; }
-  .accordeon-fleche { width: 44px; height: 44px; }
+  .cabinet-bio > p:first-of-type::first-letter { font-size: 2.9em; }
 
-  .etapes li { gap: 18px; padding: 22px 0; }
-  .etapes .num { width: 48px; height: 48px; }
-  .honoraires-carte { padding: 30px 24px; }
+  .qualites li { grid-template-columns: 1fr; gap: 2px; padding: 12px 0; }
 
-  .articles { grid-template-columns: 1fr; }
+  .bande-citation { font-size: clamp(1.7rem, 8vw, 2.4rem); }
 
-  .rejoindre-actions { flex-direction: column; }
-  .rejoindre-actions .btn { width: 100%; }
+  .etapes li { grid-template-columns: minmax(36px, auto) 1fr; gap: 6px 16px; }
+
+  .principes th, .principes td { display: block; width: 100%; padding: 0; border: none; }
+  .principes tr { display: block; padding: 13px 0; border-bottom: 1px solid var(--filet); }
+  .principes th { margin-bottom: 3px; }
+
+  .question-entete { min-height: 60px; padding: 14px 0; gap: 14px; }
 
   .champ-duo { grid-template-columns: 1fr; gap: 0; }
-  .contact-formulaire { padding: 30px 22px; }
 
-  .pied-grille { grid-template-columns: 1fr; gap: 34px; padding-top: 56px; padding-bottom: 40px; }
-  .pied-bas { flex-direction: column; align-items: flex-start; }
-}
-
-/* ---------- ≤ 400px ---------- */
-@media (max-width: 400px) {
-  .qualites { grid-template-columns: 1fr; }
-  .hero-stats { grid-template-columns: 1fr; }
-  .hero-stats li { padding: 0; border-left: none; }
+  .pied-grille { grid-template-columns: 1fr; gap: 30px; padding-top: 52px; padding-bottom: 34px; }
+  .pied-bas { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 
 /* ---------- Anti-zoom iOS : champs 16px minimum ---------- */
