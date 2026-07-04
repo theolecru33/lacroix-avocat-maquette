@@ -377,34 +377,24 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
 
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Portrait : panneau crème décalé, la tête dépasse du panneau */
-.hero-visuel { display: flex; justify-content: flex-end; }
-.hero-portrait { margin: 0; width: min(460px, 100%); }
+/* Portrait : cadre crème, Maître Lacroix en entier, aucune coupure */
+.hero-visuel { display: flex; align-items: flex-end; justify-content: center; }
+.hero-portrait { margin: 0; width: min(430px, 100%); }
 .hero-compo {
   position: relative;
-  width: 100%;
-  aspect-ratio: 10 / 11.5;
+  background: var(--creme);
+  border-radius: var(--rayon);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
-}
-.hero-compo::before {
-  content: '';
-  position: absolute;
-  left: 8%;
-  right: 0;
-  top: 15%;
-  bottom: 0;
-  background: var(--creme);
-  border-radius: var(--rayon) var(--rayon) 0 0;
+  padding: 34px 7% 0;
 }
 .hero-compo img {
   position: relative;
-  z-index: 1;
-  width: 88%;
+  width: 100%;
   height: auto;
-  margin-bottom: -2px;
+  display: block;
+  margin-bottom: -1px;
 }
 .hero-portrait figcaption {
   display: flex;
@@ -412,7 +402,7 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
   align-items: baseline;
   gap: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 12px 2px 22px;
+  padding: 13px 2px 0;
 }
 .hero-portrait figcaption strong {
   font-family: var(--titre);
@@ -428,31 +418,34 @@ section[id], div[id] { scroll-margin-top: calc(var(--header-h) + 14px); }
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Repères chiffrés : une seule ligne de quatre, sous le hero */
+/* Repères chiffrés : une seule ligne de quatre, colonnes égales */
 .hero-stats {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
   border-top: 1px solid var(--filet-clair);
-  padding: 30px 0 44px;
+  margin-top: clamp(36px, 4vw, 56px);
 }
-.hero-stats li { padding: 0 28px; border-left: 1px solid var(--filet-clair); }
+.hero-stats li {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 28px 8px;
+  border-left: 1px solid var(--filet-clair);
+}
 .hero-stats li:first-child { padding-left: 0; border-left: none; }
 .hero-stats strong {
-  display: block;
   font-family: var(--titre);
   font-weight: 400;
-  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-size: clamp(1.9rem, 2.7vw, 2.5rem);
   color: var(--creme);
-  line-height: 1.1;
-  margin-bottom: 6px;
+  line-height: 1;
+  margin-bottom: 12px;
 }
 .hero-stats li > span {
-  font-size: 0.9063rem;
+  font-size: 0.875rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.66);
-  display: block;
-  max-width: 16em;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 /* ---------- Bandeau credentials ---------- */
