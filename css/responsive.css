@@ -105,6 +105,17 @@
   .qualites { grid-template-columns: 1fr; }
 }
 
+/* ---------- ≤ 900px : centrage mobile (titres, sous-titres, intros, boutons) ----------
+   Le hero est déjà centré ; ici on centre les en-têtes de section sur téléphone/tablette. */
+@media (max-width: 900px) {
+  .label { justify-content: center; }
+  .titre-xl { text-align: center; margin-left: auto; margin-right: auto; }
+  .section-intro { text-align: center; margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .cabinet-portrait { margin-left: auto; margin-right: auto; }
+  .rejoindre-actions { justify-content: center; }
+}
+
 /* ---------- Anti-zoom iOS : champs 16px minimum ---------- */
 @media (max-width: 1024px) {
   .champ input,

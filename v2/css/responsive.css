@@ -107,6 +107,30 @@
   .hero-stats li:nth-child(n+2) { border-top: 1px solid var(--filet-clair); }
 }
 
+/* ---------- ≤ 940px : centrage mobile (titres, sous-titres, intros, boutons) ----------
+   Sur téléphone/tablette on centre les en-têtes ; le desktop reste éditorial (aligné à gauche). */
+@media (max-width: 940px) {
+  /* Hero */
+  .hero-texte { text-align: center; }
+  .hero-texte .label { justify-content: center; }
+  .hero-texte .label::after { display: none; } /* le kicker du hero passe sur 2 lignes : on retire le filet flottant */
+  .hero h1 { margin-left: auto; margin-right: auto; }
+  .hero-intro { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
+  .hero-visuel { justify-content: center; }
+  .hero-portrait figcaption { justify-content: center; gap: 14px; }
+
+  /* En-têtes de section : kicker + titre + intro */
+  .label { justify-content: center; }
+  .titre-xl { text-align: center; margin-left: auto; margin-right: auto; }
+  .section-intro { text-align: center; margin-left: auto; margin-right: auto; }
+  .entete-editoriale { text-align: center; }
+  .entete-editoriale p { margin-left: auto; margin-right: auto; }
+
+  /* Boutons pleine largeur déjà centrés ; on centre les groupes restants */
+  .rejoindre-actions { justify-content: center; }
+}
+
 /* ---------- Anti-zoom iOS : champs 16px minimum ---------- */
 @media (max-width: 1024px) {
   .champ input,
