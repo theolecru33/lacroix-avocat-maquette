@@ -110,6 +110,9 @@
 /* ---------- ≤ 940px : centrage mobile (titres, sous-titres, intros, boutons) ----------
    Sur téléphone/tablette on centre les en-têtes ; le desktop reste éditorial (aligné à gauche). */
 @media (max-width: 940px) {
+  /* Hero : rétablir l'air au-dessus du kicker (le raccourci .conteneur{padding:0 20px}
+     du palier ≤640 écrase le padding-top de .hero-grille et colle le hero au header sticky) */
+  .hero-grille { padding-top: 44px; }
   /* Hero */
   .hero-texte { text-align: center; }
   .hero-texte .label { justify-content: center; }
